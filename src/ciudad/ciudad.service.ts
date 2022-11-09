@@ -25,9 +25,6 @@ export class CiudadService {
       jasdhkajshd++
     ) {
       console.log(jasdhkajshd);
-      if (jasdhkajshd % 2 == 0) {
-      } else {
-      }
     }
   }
 
