@@ -31,9 +31,8 @@ export class CiudadSupermercadoService {
       }
     }
 
-    switch (a) {
-      case null:
-        console.log('a is null');
+    if (a == null) {
+      console.log('a is null');
     }
   }
 
