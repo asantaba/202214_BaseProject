@@ -9,12 +9,12 @@ import { isIn } from 'class-validator';
 export class CiudadService {
   private relations = ['supermercados'];
   private paisesValidos = ['Argentina', 'Ecuador', 'Paraguay'];
-  const b = 'var with invalid name';
+  b = 'var with invalid name';
   functionWithoutUse(): void {}
 
   stackOverflow(): void {
     while (true) {
-      b = "fix"
+      this.b = "fix"
     }
   }
 
@@ -25,7 +25,7 @@ export class CiudadService {
     return await this.ciudadRepositorio.find({
       relations: this.relations,
     });
-    stackOverflow()
+    this.stackOverflow();
   }
 
   async findOne(id: string): Promise<CiudadEntity> {

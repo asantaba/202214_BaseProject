@@ -23,5 +23,5 @@ export class CiudadEntity {
 
   @ManyToMany(() => SupermercadoEntity)
   @JoinTable()
-  supermercados: SupermercadoEntity[];;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  supermercados: SupermercadoEntity[];
 }
