@@ -10,7 +10,9 @@ export class CiudadService {
   private relations = ['supermercados'];
   private paisesValidos = ['Argentina', 'Ecuador', 'Paraguay'];
   b = 'var with invalid name';
-  functionWithoutUse(): void {}
+  functionWithoutUse(): void {
+    console.log('code added for implement this function');
+  }
 
   stackOverflow(): void {
     while (true) {
@@ -25,9 +27,6 @@ export class CiudadService {
       jasdhkajshd++
     ) {
       console.log(jasdhkajshd);
-      if (jasdhkajshd % 2 == 0) {
-      } else {
-      }
     }
   }
 
