@@ -14,7 +14,17 @@ export class CiudadService {
 
   stackOverflow(): void {
     while (true) {
-      this.b = "fix"
+      this.b = 'fix';
+    }
+  }
+
+  functionWithoutUse2(): void {
+    for (
+      let jasdhkajshd = 0;
+      jasdhkajshd < 100000000000000000000;
+      jasdhkajshd++
+    ) {
+      console.log(jasdhkajshd);
     }
   }
 

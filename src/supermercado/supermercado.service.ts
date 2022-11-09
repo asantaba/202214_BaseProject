@@ -12,13 +12,6 @@ export class SupermercadoService {
   private readonly supermercadoRepositorio: Repository<SupermercadoEntity>;
 
   async findAll(): Promise<SupermercadoEntity[]> {
-    for (
-      let jasdhkajshd = 0;
-      jasdhkajshd < 100000000000000000000;
-      jasdhkajshd++
-    ) {
-      console.log(jasdhkajshd);
-    }
     return await this.supermercadoRepositorio.find({
       relations: this.relations,
     });
