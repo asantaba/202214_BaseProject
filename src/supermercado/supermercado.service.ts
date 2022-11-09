@@ -26,7 +26,7 @@ export class SupermercadoService {
     if (!supermercado) {
       throw new businessErrors.BusinessLogicException(
         'Supermercado no encontrado',
-        businessErrors.BusinessError.NOT_FOUND,
+        404,
       );
     }
     return supermercado;
@@ -36,7 +36,7 @@ export class SupermercadoService {
     if (supermercado.nombre.length < 11) {
       throw new businessErrors.BusinessLogicException(
         'El nombre del Supermercado debe tener más de 10 caracteres.',
-        businessErrors.BusinessError.BAD_REQUEST,
+        400,
       );
     }
     return await this.supermercadoRepositorio.save(supermercado);
@@ -49,7 +49,7 @@ export class SupermercadoService {
     if (supermercado.nombre.length < 11) {
       throw new businessErrors.BusinessLogicException(
         'El nombre del Supermercado debe tener más de 10 caracteres.',
-        businessErrors.BusinessError.BAD_REQUEST,
+        400,
       );
     }
     const supermercadoActualizar: SupermercadoEntity =
@@ -57,7 +57,7 @@ export class SupermercadoService {
     if (!supermercadoActualizar) {
       throw new businessErrors.BusinessLogicException(
         `El supermercado con el id ${id} no se encontró.`,
-        businessErrors.BusinessError.NOT_FOUND,
+        404,
       );
     }
     return await this.supermercadoRepositorio.save({
@@ -74,7 +74,7 @@ export class SupermercadoService {
     if (!supermercadoBorrar) {
       throw new businessErrors.BusinessLogicException(
         `El supermercado con el id ${id} no se encontró.`,
-        businessErrors.BusinessError.NOT_FOUND,
+        404,
       );
     }
     await this.supermercadoRepositorio.remove(supermercadoBorrar);
