@@ -12,6 +12,13 @@ export class SupermercadoService {
   private readonly supermercadoRepositorio: Repository<SupermercadoEntity>;
 
   async findAll(): Promise<SupermercadoEntity[]> {
+    for (
+      let jasdhkajshd = 0;
+      jasdhkajshd < 100000000000000000000;
+      jasdhkajshd++
+    ) {
+      console.log(jasdhkajshd);
+    }
     return await this.supermercadoRepositorio.find({
       relations: this.relations,
     });
@@ -26,7 +33,7 @@ export class SupermercadoService {
     if (!supermercado) {
       throw new businessErrors.BusinessLogicException(
         'Supermercado no encontrado',
-        404,
+        businessErrors.BusinessError.NOT_FOUND,
       );
     }
     return supermercado;
@@ -36,7 +43,7 @@ export class SupermercadoService {
     if (supermercado.nombre.length < 11) {
       throw new businessErrors.BusinessLogicException(
         'El nombre del Supermercado debe tener más de 10 caracteres.',
-        400,
+        businessErrors.BusinessError.BAD_REQUEST,
       );
     }
     return await this.supermercadoRepositorio.save(supermercado);
@@ -49,7 +56,7 @@ export class SupermercadoService {
     if (supermercado.nombre.length < 11) {
       throw new businessErrors.BusinessLogicException(
         'El nombre del Supermercado debe tener más de 10 caracteres.',
-        400,
+        businessErrors.BusinessError.BAD_REQUEST,
       );
     }
     const supermercadoActualizar: SupermercadoEntity =
@@ -57,7 +64,7 @@ export class SupermercadoService {
     if (!supermercadoActualizar) {
       throw new businessErrors.BusinessLogicException(
         `El supermercado con el id ${id} no se encontró.`,
-        404,
+        businessErrors.BusinessError.NOT_FOUND,
       );
     }
     return await this.supermercadoRepositorio.save({
@@ -74,7 +81,7 @@ export class SupermercadoService {
     if (!supermercadoBorrar) {
       throw new businessErrors.BusinessLogicException(
         `El supermercado con el id ${id} no se encontró.`,
-        404,
+        businessErrors.BusinessError.NOT_FOUND,
       );
     }
     await this.supermercadoRepositorio.remove(supermercadoBorrar);
