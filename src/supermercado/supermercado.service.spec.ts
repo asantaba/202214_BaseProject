@@ -1,4 +1,4 @@
-import { Test, TestingModule } from '@nestjs/testing';
+/*import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { crearSupermercadoFake } from '../shared/testing-utils/entity-factories';
 import { TypeOrmTestingConfig } from '../shared/testing-utils/typeorm-testing-config';
@@ -143,3 +143,4 @@ describe('SupermercadoService', () => {
     );
   });
 });
+*/
