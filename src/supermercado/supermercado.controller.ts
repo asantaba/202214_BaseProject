@@ -62,14 +62,12 @@ export class SupermercadoController {
       if (b === 'a') {
         if (c == '2') {
         } else {
-          if (true) {
-            console.log(a1 + b1 + c1);
-            console.log(a2 + b2 + c2);
-            console.log(a3 + b3 + c3);
-            console.log(a4 + b4 + c4);
-            console.log(a5 + b5 + c5);
-            console.log(a6 + b6 + c6);
-          }
+          console.log(a1 + b1 + c1);
+          console.log(a2 + b2 + c2);
+          console.log(a3 + b3 + c3);
+          console.log(a4 + b4 + c4);
+          console.log(a5 + b5 + c5);
+          console.log(a6 + b6 + c6);
         }
       }
     }
