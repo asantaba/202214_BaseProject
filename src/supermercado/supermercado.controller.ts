@@ -28,8 +28,7 @@ export class SupermercadoController {
       if (this.b === 'a') {
         if (this.c == '2') {
         } else {
-          if (true) {
-          }
+          console.log('implement function');
         }
       }
     }
@@ -42,21 +41,6 @@ export class SupermercadoController {
     a1: string,
     b1: string,
     c1: string,
-    a2: string,
-    b2: string,
-    c2: string,
-    a3: string,
-    b3: string,
-    c3: string,
-    a4: string,
-    b4: string,
-    c4: string,
-    a5: string,
-    b5: string,
-    c5: string,
-    a6: string,
-    b6: string,
-    c6: string,
   ): void {
     if (a === '') {
       if (b === 'a') {
@@ -64,11 +48,6 @@ export class SupermercadoController {
         } else {
           if (true) {
             console.log(a1 + b1 + c1);
-            console.log(a2 + b2 + c2);
-            console.log(a3 + b3 + c3);
-            console.log(a4 + b4 + c4);
-            console.log(a5 + b5 + c5);
-            console.log(a6 + b6 + c6);
           }
         }
       }
