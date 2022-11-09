@@ -46,9 +46,7 @@ export class SupermercadoController {
       if (b === 'a') {
         if (c == '2') {
         } else {
-          if (true) {
-            console.log(a1 + b1 + c1);
-          }
+          console.log(a1 + b1 + c1);
         }
       }
     }
