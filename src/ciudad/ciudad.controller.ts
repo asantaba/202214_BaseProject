@@ -26,7 +26,7 @@ export class CiudadController {
   }
 
   @Get()
-  async findAll() {
+  async findAll1() {
     return await this.ciudadService.findAll();
   }
 
