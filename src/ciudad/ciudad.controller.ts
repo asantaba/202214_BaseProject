@@ -25,6 +25,11 @@ export class CiudadController {
     return await this.ciudadService.findAll();
   }
 
+  @Get()
+  async findAll() {
+    return await this.ciudadService.findAll();
+  }
+
   @Get(':ciudadId')
   async findOne(@Param('ciudadId') ciudadId: string) {
     return await this.ciudadService.findOne(ciudadId);
@@ -38,6 +43,24 @@ export class CiudadController {
 
   @Put(':ciudadId')
   async update(
+    @Param('ciudadId') ciudadId: string,
+    @Body() ciudadDto: CiudadDto,
+  ) {
+    const ciudad: CiudadEntity = plainToInstance(CiudadEntity, ciudadDto);
+    return await this.ciudadService.update(ciudadId, ciudad);
+  }
+
+  @Put(':ciudadId')
+  async update1(
+    @Param('ciudadId') ciudadId: string,
+    @Body() ciudadDto: CiudadDto,
+  ) {
+    const ciudad: CiudadEntity = plainToInstance(CiudadEntity, ciudadDto);
+    return await this.ciudadService.update(ciudadId, ciudad);
+  }
+
+  @Put(':ciudadId')
+  async update2(
     @Param('ciudadId') ciudadId: string,
     @Body() ciudadDto: CiudadDto,
   ) {

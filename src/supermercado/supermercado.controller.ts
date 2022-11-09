@@ -20,6 +20,9 @@ import { BusinessErrorsInterceptor } from '../shared/interceptors/business-error
 export class SupermercadoController {
   constructor(private readonly supermercadoService: SupermercadoService) {}
 
+  const a = 'var with invalid name';
+  functionWithoutUse(): void {}
+
   @Get()
   async findAll() {
     return await this.supermercadoService.findAll();

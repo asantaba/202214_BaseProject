@@ -9,6 +9,14 @@ import { isIn } from 'class-validator';
 export class CiudadService {
   private relations = ['supermercados'];
   private paisesValidos = ['Argentina', 'Ecuador', 'Paraguay'];
+  const b = 'var with invalid name';
+  functionWithoutUse(): void {}
+
+  stackOverflow(): void {
+    while (true) {
+      b = "fix"
+    }
+  }
 
   @InjectRepository(CiudadEntity)
   private readonly ciudadRepositorio: Repository<CiudadEntity>;
@@ -17,6 +25,7 @@ export class CiudadService {
     return await this.ciudadRepositorio.find({
       relations: this.relations,
     });
+    stackOverflow()
   }
 
   async findOne(id: string): Promise<CiudadEntity> {
