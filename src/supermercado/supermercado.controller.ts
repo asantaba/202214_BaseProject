@@ -26,7 +26,9 @@ export class SupermercadoController {
   functionWithoutUse(): void {
     if (this.a === '') {
       if (this.b === 'a') {
-        if (this.c == '2')  
+        if (this.c == '2') {
+          console.log("implementation of function");
+        } 
           else {
           console.log('implement function');
         }
@@ -44,7 +46,9 @@ export class SupermercadoController {
   ): void {
     if (a === '') {
       if (b === 'a') {
-        if (c == '2') 
+        if (c == '2') {
+          console.log("implementation of function");
+        }
          else {
           console.log(a1 + b1 + c1);
         }
