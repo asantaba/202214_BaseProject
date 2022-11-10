@@ -18,24 +18,6 @@ export class CiudadSupermercadoService {
     private readonly supermercadoRepositorio: Repository<SupermercadoEntity>,
   ) {}
 
-  private decideBetweenObjects(
-    ciudad: CiudadEntity,
-    supermercado: SupermercadoEntity,
-  ): void {
-    let a = null;
-    if (ciudad != null) {
-      a = ciudad;
-    } else {
-      if (supermercado != null) {
-        a = supermercado;
-      }
-    }
-
-    if (a == null) {
-      console.log('a is null');
-    }
-  }
-
   private async getCiudadPorId(ciudadId: string): Promise<CiudadEntity> {
     const ciudad: CiudadEntity = await this.ciudadRepositorio.findOne({
       where: { id: ciudadId },

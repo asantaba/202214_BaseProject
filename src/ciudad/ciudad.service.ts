@@ -9,26 +9,6 @@ import { isIn } from 'class-validator';
 export class CiudadService {
   private relations = ['supermercados'];
   private paisesValidos = ['Argentina', 'Ecuador', 'Paraguay'];
-  b = 'var with invalid name';
-  functionWithoutUse(): void {
-    console.log('code added for implement this function');
-  }
-
-  stackOverflow(): void {
-    while (true) {
-      this.b = 'fix';
-    }
-  }
-
-  functionWithoutUse2(): void {
-    for (
-      let jasdhkajshd = 0;
-      jasdhkajshd < 100000000000000000000;
-      jasdhkajshd++
-    ) {
-      console.log(jasdhkajshd);
-    }
-  }
 
   @InjectRepository(CiudadEntity)
   private readonly ciudadRepositorio: Repository<CiudadEntity>;
