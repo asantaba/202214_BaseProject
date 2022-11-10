@@ -27,6 +27,7 @@ export class SupermercadoController {
     if (this.a === '') {
       if (this.b === 'a') {
         if (this.c == '2') {
+          console.log("implementation of function");
         } else {
           console.log('implement function');
         }
@@ -45,6 +46,7 @@ export class SupermercadoController {
     if (a === '') {
       if (b === 'a') {
         if (c == '2') {
+          console.log("implementation of function");
         } else {
           console.log(a1 + b1 + c1);
         }
