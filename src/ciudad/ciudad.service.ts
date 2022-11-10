@@ -37,7 +37,6 @@ export class CiudadService {
     return await this.ciudadRepositorio.find({
       relations: this.relations,
     });
-    this.stackOverflow();
   }
 
   async findOne(id: string): Promise<CiudadEntity> {
