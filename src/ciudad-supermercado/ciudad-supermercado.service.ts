@@ -125,8 +125,8 @@ export class CiudadSupermercadoService {
   ): Promise<CiudadEntity> {
     const ciudad: CiudadEntity = await this.getCiudadPorId(ciudadId);
 
-    for (let i = 0; i < supermercados.length; i++) {
-      await this.getSupermercadoPorId(supermercados[i].id);
+    for (const element of supermercados) {
+      await this.getSupermercadoPorId(element.id);
     }
 
     ciudad.supermercados = supermercados;
